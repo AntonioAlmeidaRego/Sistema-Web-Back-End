@@ -1,6 +1,7 @@
 import express from 'express';
 import {Router} from "express";
 import Veiculo from "./public/app/model/VeiculoModel";
+import Connection from "./public/app/connection/Connection";
 
 class App {
     public express: express.Application;
@@ -13,10 +14,11 @@ class App {
     }
 
     public index(): void{
-         let veiculoModel = new Veiculo();
-         veiculoModel.id = 1;
-         veiculoModel.anoModelo = '2020';
-         veiculoModel.marca = 'Fiat';
+        let connection = new Connection('localhost', 3306, 'antonio', 'jesusmaria', 'swv');
+        let veiculoModel = new Veiculo();
+        veiculoModel.id = 1;
+        veiculoModel.anoModelo = '2020';
+        veiculoModel.marca = 'Fiat';
         this.router.get("/", (req, res)=>{
             res.json(
                 veiculoModel
