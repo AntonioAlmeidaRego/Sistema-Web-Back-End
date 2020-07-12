@@ -1,0 +1,13 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "antonio",
+  "password": "jesusmaria",
+  "database": "swv",
+  "synchronize": true,
+  "logging": false,
+  "entities": [
+    "public/app/model/**/*.ts"
+  ]
+}

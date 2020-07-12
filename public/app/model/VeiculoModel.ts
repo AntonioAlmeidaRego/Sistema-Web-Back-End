@@ -1,18 +1,30 @@
-export default class VeiculoModel {
+import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 
-    private _id: string | number;
-    private _marca: string;
-    private _valor: string | number;
-    private _modelo: string;
-    private _anoModelo: string;
+@Entity()
+export class VeiculoModel {
+    @PrimaryGeneratedColumn()
+    _id: number;
+    @Column()
+    _marca: string;
+    @Column()
+    _valor: string;
+    @Column()
+    _modelo: string;
+    @Column()
+    _anoModelo: string;
+    @Column()
     private _compostivel: string;
-    private _codigoFipe: string;
-    private _mesReferencia: string;
-    private _tipoVeiculo: string;
-    private _siglaCombustivel: string;
+    @Column()
+    _codigoFipe: string;
+    @Column()
+    _mesReferencia: string;
+    @Column()
+    _tipoVeiculo: string;
+    @Column()
+    _siglaCombustivel: string;
 
     constructor() {
-        this._id = "";
+        this._id = 0;
         this._marca = "";
         this._valor = "";
         this._modelo = "";
@@ -24,11 +36,11 @@ export default class VeiculoModel {
         this._siglaCombustivel = "";
     }
 
-    get id(): string | number {
+    get id(): number {
         return this._id;
     }
 
-    set id(value: string | number) {
+    set id(value: number) {
         this._id = value;
     }
 
@@ -40,11 +52,11 @@ export default class VeiculoModel {
         this._marca = value;
     }
 
-    get valor(): string | number {
+    get valor(): string{
         return this._valor;
     }
 
-    set valor(value: string | number) {
+    set valor(value: string) {
         this._valor = value;
     }
 

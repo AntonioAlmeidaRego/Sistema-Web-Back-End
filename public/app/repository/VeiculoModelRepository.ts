@@ -1,8 +1,8 @@
-import Repository from "./Repository";
-import VeiculoModel from "../model/VeiculoModel";
+import {Repository} from "./Repository";
+import {VeiculoModel} from "../model/VeiculoModel";
 
-export default class VeiculoModelRepository implements Repository<VeiculoModel>{
-    save(entity: VeiculoModel) {
-
-    }
+class VeiculoModelRepository{
+   public repository: Repository<VeiculoModel> = new Repository<VeiculoModel>()
 }
+
+export default new VeiculoModelRepository().repository;
