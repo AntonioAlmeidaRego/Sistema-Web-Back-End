@@ -10,11 +10,11 @@ class VeiculoService{
     }
     // @ts-ignore
     public findOne = async(id: number) => {
-        return await this.repository.findOne("VeiculoModel", id);
+        return await this.repository.findOne(new VeiculoModel(), id);
     }
 
-    public findAll(){
-        return this.repository.findAll("VeiculoModel");
+    public async findAll(){
+        return await this.repository.findAll(new VeiculoModel());
     }
 }
 

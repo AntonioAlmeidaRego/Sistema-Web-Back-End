@@ -1,10 +1,7 @@
-
-
-// @ts-ignore
 import express, {Router} from 'express';
-import VeiculoModel from "./public/app/model/VeiculoModel";
-import VeiculoController from "./public/app/controller/VeiculoController";
-import routes from "./routes/routesVeiculo/router";
+import routesVeiculo from "./routes/routesVeiculo/router";
+import routesUser from "./routes/routesUser/router";
+
 class App {
     public express: express.Application
     private router: express.Router;
@@ -16,7 +13,8 @@ class App {
     }
 
     public index(): void{
-        this.express.use(routes);
+        this.express.use(routesUser);
+        this.express.use(routesVeiculo);
     }
 
 }
