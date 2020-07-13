@@ -1,12 +1,12 @@
-import "reflect-metadata";
-import express from 'express';
-import {Router} from "express";
+
+
+// @ts-ignore
+import express, {Router} from 'express';
+import VeiculoModel from "./public/app/model/VeiculoModel";
 import VeiculoController from "./public/app/controller/VeiculoController";
-import {VeiculoModel} from "./public/app/model/VeiculoModel";
-
-
+import routes from "./routes/routesVeiculo/router";
 class App {
-    public express: express.Application;
+    public express: express.Application
     private router: express.Router;
     constructor() {
         this.express = express();
@@ -16,19 +16,7 @@ class App {
     }
 
     public index(): void{
-        let veiculoModel = new VeiculoModel();
-        veiculoModel.anoModelo = '2020';
-        veiculoModel.marca = 'Fiat';
-
-        let veiculoService = new VeiculoController();
-        veiculoService.save(veiculoModel);
-        this.router.get("/", (req, res)=>{
-            res.json(
-               // veiculoModel
-            );
-        });
-
-        this.express.use("/", this.router);
+        this.express.use(routes);
     }
 
 }

@@ -1,11 +1,22 @@
-import {VeiculoService} from "../service/VeiculoService";
-import {VeiculoModel} from "../model/VeiculoModel";
+import VeiculoService from "../service/VeiculoService";
+import VeiculoModel from "../model/VeiculoModel";
+import {Request, Response} from "express";
 
-export default class VeiculoController {
-    private service: VeiculoService = new VeiculoService();
+class VeiculoController {
 
+    public async findAll(req: Request, res: Response){
+       const veiculos = await VeiculoService.findAll();
+       return res.json(veiculos);
+    }
+
+    public async findOne(req: Request, res: Response){
+        const veiculo = await VeiculoService.findOne(Number(req.params.id));
+        return res.json(veiculo);
+    }
 
     public save(entity: VeiculoModel){
-        this.service.save(entity);
+        VeiculoService.save(entity);
     }
 }
+
+export default new VeiculoController();

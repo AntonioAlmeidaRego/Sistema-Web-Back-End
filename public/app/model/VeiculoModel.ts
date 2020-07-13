@@ -1,27 +1,29 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 
-@Entity()
-export class VeiculoModel {
+import 'reflect-metadata';
+import {PrimaryGeneratedColumn, Entity, Column} from "typeorm";
+
+@Entity('veiculo')
+export default class VeiculoModel {
     @PrimaryGeneratedColumn()
-    _id: number;
+    private _id: number;
     @Column()
-    _marca: string;
+    private _marca: string;
     @Column()
-    _valor: string;
+    private _valor: string;
     @Column()
-    _modelo: string;
+    private _modelo: string;
     @Column()
-    _anoModelo: string;
+    private _anoModelo: string;
     @Column()
     private _compostivel: string;
     @Column()
-    _codigoFipe: string;
+    private _codigoFipe: string;
     @Column()
-    _mesReferencia: string;
+    private _mesReferencia: string;
     @Column()
-    _tipoVeiculo: string;
+    private _tipoVeiculo: string;
     @Column()
-    _siglaCombustivel: string;
+    private _siglaCombustivel: string;
 
     constructor() {
         this._id = 0;
