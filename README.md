@@ -11,25 +11,25 @@ Instalar o yarn (Linux):
 [https://classic.yarnpkg.com/en/docs/install/#debian-stable](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 
 Instalar o npx (Linux)<br />
-####`sudo npm install -g npx` 
+`sudo npm install -g npx` 
 
 Instalar o typescript (Linux)<br />
-####`sudo npm install -g typescript`
+`sudo npm install -g typescript`
 Instalar o ts-node (Linux)<br />
-####`sudo npm install -g ts-node`
+`sudo npm install -g ts-node`
  
 Instalar o typeorm (Linux)<br />
-####`sudo npm install typeorm -g`
+`sudo npm install typeorm -g`
 
 Baixar pacotes no diretório do projeto (Linux)<br />
-####`sudo npm install ou sudo yarn install`
+`sudo npm install ou sudo yarn install`
 
 ##Executar Projeto
 
 Acessar diretorio do projeto
-####`cd my-project`
+`cd my-project`
 
 Executar comando:
-####`npm start ou ts-node -r tsconfig-paths/register bin/www`
+`npm start ou ts-node -r tsconfig-paths/register bin/www`
 
   
