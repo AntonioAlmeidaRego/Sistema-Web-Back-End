@@ -24,7 +24,7 @@ Instalar o typeorm (Linux)<br />
 Baixar pacotes no diretório do projeto (Linux)<br />
 `sudo npm install ou sudo yarn install`
 
-##Executar Projeto
+Executar Projeto
 
 Acessar diretorio do projeto
 `cd my-project`
