@@ -4,7 +4,7 @@ import {Request, Response} from "express";
 
 class VeiculoController {
 
-    public async findAll(req: Request, res: Response){
+    public async findAll(req: Request, res: Response){ 
        const veiculos = await VeiculoService.findAll();
        return res.json(veiculos);
     }

@@ -11,6 +11,7 @@ export class Repository<T extends Object>{
        createConnection().then(async connection=>{
            console.log(connection.isConnected)
            await connection.manager.save(entity);
+           await connection.close();
        }).catch(error => console.log(error));
     }
 

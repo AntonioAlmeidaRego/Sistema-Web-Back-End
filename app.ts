@@ -1,7 +1,6 @@
 import express, {Router} from 'express';
 import routesVeiculo from "./routes/routesVeiculo/router";
 import routesUser from "./routes/routesUser/router";
-
 class App {
     public express: express.Application
     private router: express.Router;
